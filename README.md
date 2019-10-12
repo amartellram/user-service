@@ -1,21 +1,21 @@
-#**USER SERVICE**
+# **USER SERVICE**
 
-##Requisitos
+## Requisitos
 - Java 11
 - Maven
 - Docker
 
-##Ejecución
-###MongoDB
+## Ejecución
+### MongoDB
 `docker-compose up`
-###Aplicación
+### Aplicación
 `mvn user-service spring-boot:run`
 
-##**Pruebas**
-###Registrar usuario 
-`curl -X POST \
-  http://localhost:8091/users \
-  -H 'Content-Type: application/json' \
+## **Pruebas**
+### Registrar usuario 
+`curl -X POST 
+  http://localhost:8091/users 
+  -H 'Content-Type: application/json' 
   -d '{
 	"documentType": "DNI",
 	"documentNumber": "46887058",
@@ -23,8 +23,8 @@
 	"lastName": "lastName"
 }'`
 
-###Consultar Usuarios
+### Consultar Usuarios
 
-`curl -X GET \
-  http://localhost:8091/users \
+`curl -X GET 
+  http://localhost:8091/users 
   -H 'Content-Type: application/json'`
